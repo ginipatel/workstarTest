@@ -6,13 +6,28 @@
     <link href="../css/main.css" rel="stylesheet">
 </head>
 <body>
-<div class="container quizExample">
-    <div class="quizQuestion ">
-        <div class="quizList">
+<div class="container quiz">
+    <div class="quizExample quizQuestion" id="quizQuestion">
+        <div class="quizQuestion text-left">
+            <div class="quizList">
+                <h3>what is your name</h3>
+                <ul class="optionUl">
+                    <li class="optionList active">
+                        <input type="radio" id="firstQue"
+                               name="contact" value="mail"> <a class="optionLink">hello</a></li>
+                    <li class="optionList"><input type="radio" id="secondQue"
+                                                  name="contact" value="mail"> <a class="optionLink">hello</a></li>
+                    <li class="optionList"><input type="radio" id="thirdQue" name="contact" value="mail"> <a
+                            class="optionLink">hello</a></li>
+                    <li class="optionList"><input type="radio" id="fourthQue" name="contact" value="mail"> <a
+                            class="optionLink">hello</a></li>
+                </ul>
+            </div>
         </div>
-
-        <button type="button" class="btn btn-default text-uppercase">Submit</button>
+        <a href="result.html" type="button" class="submit-btn btn btn-default text-uppercase">Submit</a>
     </div>
+
+
 </div>
 
 
