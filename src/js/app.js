@@ -40,8 +40,8 @@
 
     // $('.quizQuestion').html(div);
     function optionUl(list,id) {
-        var ul = $("<ul></ul>");
-        $.map(list, function (listItem, index) {
+        var ul = $("<ul class='optionUl'></ul>");
+        $.map(list, function (listItem , index) {
             // ul.append('"<li><span><input value="' +  +'"></span>"+ listItem +"</li>"');
             ul.append("<li> <span><input type='radio' value='listItem' name='option_"+id+"'/></span>"+listItem+"</li>");
         });
