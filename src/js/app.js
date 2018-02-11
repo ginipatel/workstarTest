@@ -27,3 +27,22 @@
 //     })
 //
 // }($));
+
+
+
+
+$(document).ready(function(){
+   var div = $("<div></div>");
+    var question = div.append("<h3>"+ queList[0].que+"</h3>");
+
+
+    var ul = $("<ul></ul>");
+    var list = ul.append("<li>"+queList[0].options[0]+"</li>");
+
+
+
+
+    div.append(ul);
+
+    $('.quizQuestion').html(div);
+});
