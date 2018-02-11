@@ -29,20 +29,32 @@
 // }($));
 
 
+(function ($) {
+    // var div = $("<div></div>");
+    // var question = div.append("<h3>"+ queList[0].que+"</h3>");
+
+    //
 
 
-$(document).ready(function(){
-   var div = $("<div></div>");
-    var question = div.append("<h3>"+ queList[0].que+"</h3>");
+    // div.append(ul);
+
+    // $('.quizQuestion').html(div);
+    function optionUl(list,id) {
+        var ul = $("<ul></ul>");
+        $.map(list, function (listItem, index) {
+            // ul.append('"<li><span><input value="' +  +'"></span>"+ listItem +"</li>"');
+            ul.append("<li> <span><input type='radio' value='listItem' name='option_"+id+"'/></span>"+listItem+"</li>");
+        });
+        return (div.append(ul));
+    }
+
+    var div = $("<div></div>");
+    $.map(queList, function (question, index) {
+        div.append("<h3>" + question.que + "</h3>");
+        optionUl(question.options, question.id);
+    });
+    $('#optionList').html(div);
+    // $('.quizQuestion').html(div);
 
 
-    var ul = $("<ul></ul>");
-    var list = ul.append("<li>"+queList[0].options[0]+"</li>");
-
-
-
-
-    div.append(ul);
-
-    $('.quizQuestion').html(div);
-});
+}($));
