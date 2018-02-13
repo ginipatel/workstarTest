@@ -13,7 +13,6 @@
     var questionsDiv = $("<div></div>");
     $.map(queList, function (question, index) {
         var innerDiv = $("<div class='innerDiv slide'></div>");
-        innerDiv.append("<span class=' '>arrow</span>");
         innerDiv.append("<h4>" + question.que + "</h4>");
         var list = optionUl(question.options, question.id, 'questions');
         innerDiv.append(list);
